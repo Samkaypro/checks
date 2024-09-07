@@ -128,3 +128,9 @@ workflows:
 7. Modify the `config.yml` to include steps for running tests, building the app, or deploying to a server.
 
 For more detailed instructions or help with specific setup tasks, please refer to the [CircleCI documentation](https://circleci.com/docs/).
+
+
+
+
+
+
