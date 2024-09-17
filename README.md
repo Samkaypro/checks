@@ -41,3 +41,6 @@ npx prettier --write .
 ##Unit Tests:
 
 Set up unit tests using a framework like Jest or React Testing Library.
+Run 
+```bash
+npm test 
