@@ -48,7 +48,6 @@ npm test
 
 ##Husky (Git Hooks):
 
-Install Husky to automate pre-commit checks like linting, formatting, and testing:
-bash
-Copy code
+#Install Husky to automate pre-commit checks like linting, formatting, and testing:
+```bash
 npx husky-init && npm install
