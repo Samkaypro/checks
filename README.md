@@ -36,3 +36,8 @@ npm run lint
 npx prettier --write . 
 
 #to format your entire codebase before committing.
+
+
+##Unit Tests:
+
+Set up unit tests using a framework like Jest or React Testing Library.
