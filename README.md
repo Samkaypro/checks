@@ -46,8 +46,15 @@ Run
 npm test 
 ##to ensure all tests pass before committing.
 
+
 ##Husky (Git Hooks):
 
 #Install Husky to automate pre-commit checks like linting, formatting, and testing:
 ```bash
 npx husky-init && npm install
+
+
+Add a pre-commit hook to run tests, linting, or formatting before code gets committed:
+bash
+Copy code
+npx husky set .husky/pre-commit "npm run lint && npm test"
