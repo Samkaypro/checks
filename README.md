@@ -44,3 +44,4 @@ Set up unit tests using a framework like Jest or React Testing Library.
 Run 
 ```bash
 npm test 
+##to ensure all tests pass before committing.
