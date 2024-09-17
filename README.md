@@ -56,4 +56,7 @@ npx husky-init && npm install
 
 Add a pre-commit hook to run tests, linting, or formatting before code gets committed:
 ```bash
-npx husky set .husky/pre-commit "npm run lint && npm test"
+npx husky set .husky/pre-commit 
+
+```bash
+npm run lint && npm test
