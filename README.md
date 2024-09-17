@@ -38,10 +38,17 @@ npx prettier --write .
 #to format your entire codebase before committing.
 
 
-##Unit Tests:
+###Unit Tests:
 
 Set up unit tests using a framework like Jest or React Testing Library.
 Run 
 ```bash
 npm test 
 ##to ensure all tests pass before committing.
+
+##Husky (Git Hooks):
+
+Install Husky to automate pre-commit checks like linting, formatting, and testing:
+bash
+Copy code
+npx husky-init && npm install
