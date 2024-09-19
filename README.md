@@ -60,3 +60,16 @@ npx husky set .husky/pre-commit
 
 ```bash
 npm run lint && npm test
+
+
+
+
+
+
+
+### Usefull libraries 
+
+1. Icon libaries
+    - https://lucide.dev/
+2. Illustration Libaries
+    - https://undraw.co/
