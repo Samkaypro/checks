@@ -1,4 +1,4 @@
-### Performing Type Checks and ESLint Checks
+### Performing Checks on code Full instructions 
 
 #### Type Check
 
