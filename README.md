@@ -73,3 +73,19 @@ npm run lint && npm test
     - https://lucide.dev/
 2. Illustration Libaries
     - https://undraw.co/
+3. Domain search 
+    - https://osint.sh/   
+
+
+
+
+
+Use Commit Types Consistently: Stick to common types like:
+
+feat for new features
+fix for bug fixes
+docs for documentation changes
+style for formatting (no code change)
+refactor for code restructuring without feature changes
+test for adding or updating tests
+chore for maintenance tasks (e.g., updating dependencies)
