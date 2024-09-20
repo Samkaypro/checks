@@ -78,8 +78,6 @@ npm run lint && npm test
 
 
 
-
-
 Use Commit Types Consistently: Stick to common types like:
 
 feat for new features
@@ -88,4 +86,4 @@ docs for documentation changes
 style for formatting (no code change)
 refactor for code restructuring without feature changes
 test for adding or updating tests
-chore for maintenance tasks (e.g., updating dependencies)
+chore for maintenance tasks (e.g., updating dependencies) 
