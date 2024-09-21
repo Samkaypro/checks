@@ -47,9 +47,9 @@ npm test
 ##to ensure all tests pass before committing.
 
 
-##Husky (Git Hooks):
+Husky (Git Hooks):
 
-#Install Husky to automate pre-commit checks like linting, formatting, and testing:
+Install Husky to automate pre-commit checks like linting, formatting, and testing:
 ```bash
 npx husky-init && npm install
 
@@ -87,3 +87,5 @@ style for formatting (no code change)
 refactor for code restructuring without feature changes
 test for adding or updating tests
 chore for maintenance tasks (e.g., updating dependencies) 
+
+
