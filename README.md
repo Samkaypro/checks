@@ -136,3 +136,8 @@ Add Test/Deployment Steps:
 Modify the config.yml to include steps for running tests, building the app, or deploying to a server.
 Would you like help with a specific part of the setup, like adding environment variables or integrating a specific service?
 
+
+illustration 
+
+
+
