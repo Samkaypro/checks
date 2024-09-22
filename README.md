@@ -89,3 +89,50 @@ test for adding or updating tests
 chore for maintenance tasks (e.g., updating dependencies) 
 
 
+
+
+
+To use CircleCI, a continuous integration and delivery platform, follow these steps:
+
+Sign Up for CircleCI:
+
+Create an account on CircleCI using GitHub, Bitbucket, or email.
+Add Your Project:
+
+After signing in, authorize CircleCI to access your repositories. Select the project you want to build and integrate with CircleCI.
+Set Up CircleCI Config File:
+
+In your project repository, create a .circleci folder in the root directory.
+Inside this folder, create a config.yml file to define your build process.
+Here's a basic example for a Node.js project:
+
+
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/node:14
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm test
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build
+
+
+      
+Customize the config file according to your project needs.
+Push Your Code:
+
+Commit the .circleci/config.yml file and push it to your repository. CircleCI will detect the changes and start building your project.
+View Build Results:
+
+You can monitor build progress and results on the CircleCI dashboard.
+Add Test/Deployment Steps:
+
+Modify the config.yml to include steps for running tests, building the app, or deploying to a server.
+Would you like help with a specific part of the setup, like adding environment variables or integrating a specific service?
+
