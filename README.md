@@ -1,112 +1,100 @@
-### Performing Checks on code Full instructions 
+# Development Best Practices
 
-#### Type Check
+This README outlines our project's development best practices, including code checks, useful libraries, and CI/CD setup.
 
-To perform a type check in a TypeScript project, use the following command:
+## Code Checks
 
-      ```bash
-      npx tsc --noEmit
+### Type Checking
 
-# The --noEmit flag tells TypeScript to perform a type check without generating any output files. 
-# This will only check for type errors in your code.
+To perform a type check in a TypeScript project:
 
-#### ESLint Errors
+```bash
+npx tsc --noEmit
+```
 
-# To check for ESLint errors in your project, run:
+The `--noEmit` flag tells TypeScript to perform a type check without generating any output files.
 
-    ```bash
-    npx eslint .
+### ESLint
 
-# If you want to automatically fix errors that ESLint can correct, add the --fix flag:
+To check for ESLint errors:
+
+```bash
+npx eslint .
+```
+
+To automatically fix errors that ESLint can correct:
 
 ```bash
 npx eslint . --fix
+```
 
-# Alternatively, if you have a script in your package.json, you can run:
+Alternatively, if you have a script in your `package.json`:
+
 ```bash
 npm run lint
+```
 
-# This will show any linting errors or warnings in your project and fix them if possible.
+### Prettier (Code Formatting)
 
+To format your entire codebase:
 
-###Prettier (Code Formatting):
-
-#Use Prettier to auto-format your code. You can run 
 ```bash
-npx prettier --write . 
+npx prettier --write .
+```
 
-#to format your entire codebase before committing.
+### Unit Tests
 
+Run tests using:
 
-###Unit Tests:
-
-Set up unit tests using a framework like Jest or React Testing Library.
-Run 
 ```bash
-npm test 
-##to ensure all tests pass before committing.
+npm test
+```
 
+### Husky (Git Hooks)
 
-Husky (Git Hooks):
+Install Husky:
 
-Install Husky to automate pre-commit checks like linting, formatting, and testing:
 ```bash
 npx husky-init && npm install
+```
 
-
-Add a pre-commit hook to run tests, linting, or formatting before code gets committed:
-```bash
-npx husky set .husky/pre-commit 
+Add a pre-commit hook:
 
 ```bash
-npm run lint && npm test
+npx husky set .husky/pre-commit "npm run lint && npm test"
+```
 
+## Useful Libraries
 
+1. Icon Libraries
+   - [Lucide](https://lucide.dev/)
 
+2. Illustration Libraries
+   - [unDraw](https://undraw.co/)
+   - [Popsy](https://popsy.co/illustrations)
 
+3. Domain Search
+   - [OSINT.SH](https://osint.sh/)
 
+## Commit Message Guidelines
 
+Use consistent commit types:
 
-### Usefull libraries 
+- `feat`: New features
+- `fix`: Bug fixes
+- `docs`: Documentation changes
+- `style`: Formatting (no code change)
+- `refactor`: Code restructuring without feature changes
+- `test`: Adding or updating tests
+- `chore`: Maintenance tasks (e.g., updating dependencies)
 
-1. Icon libaries
-    - https://lucide.dev/
-2. Illustration Libaries
-    - https://undraw.co/
-3. Domain search 
-    - https://osint.sh/   
+## CircleCI Setup
 
+1. Sign up for CircleCI using GitHub, Bitbucket, or email.
+2. Add your project in the CircleCI dashboard.
+3. Create a `.circleci/config.yml` file in your project root:
 
-
-Use Commit Types Consistently: Stick to common types like:
-
-feat for new features
-fix for bug fixes
-docs for documentation changes
-style for formatting (no code change)
-refactor for code restructuring without feature changes
-test for adding or updating tests
-chore for maintenance tasks (e.g., updating dependencies) 
-
-
-
-
-
-To use CircleCI, a continuous integration and delivery platform, follow these steps:
-
-Sign Up for CircleCI:
-
-Create an account on CircleCI using GitHub, Bitbucket, or email.
-Add Your Project:
-
-After signing in, authorize CircleCI to access your repositories. Select the project you want to build and integrate with CircleCI.
-Set Up CircleCI Config File:
-
-In your project repository, create a .circleci folder in the root directory.
-Inside this folder, create a config.yml file to define your build process.
-Here's a basic example for a Node.js project:
-
-
+```yaml
 version: 2.1
 jobs:
   build:
@@ -121,25 +109,11 @@ workflows:
   build:
     jobs:
       - build
+```
 
+4. Customize the config file according to your project needs.
+5. Commit and push the `.circleci/config.yml` file.
+6. Monitor build progress and results on the CircleCI dashboard.
+7. Modify the `config.yml` to include steps for running tests, building the app, or deploying to a server.
 
-      
-Customize the config file according to your project needs.
-Push Your Code:
-
-Commit the .circleci/config.yml file and push it to your repository. CircleCI will detect the changes and start building your project.
-View Build Results:
-
-You can monitor build progress and results on the CircleCI dashboard.
-Add Test/Deployment Steps:
-
-Modify the config.yml to include steps for running tests, building the app, or deploying to a server.
-Would you like help with a specific part of the setup, like adding environment variables or integrating a specific service?
-
-
-illustration 
-https://popsy.co/illustrations/
-https://undraw.co/search
-
-
-
+For more detailed instructions or help with specific setup tasks, please refer to the [CircleCI documentation](https://circleci.com/docs/).
