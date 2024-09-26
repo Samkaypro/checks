@@ -2,6 +2,17 @@
 
 This README outlines our project's development best practices, including code checks, useful libraries, and CI/CD setup.
 
+## Table of Contents
+- [Code Checks](#code-checks)
+  - [Type Checking](#type-checking)
+  - [ESLint](#eslint)
+  - [Prettier (Code Formatting)](#prettier-code-formatting)
+  - [Unit Tests](#unit-tests)
+  - [Husky (Git Hooks)](#husky-git-hooks)
+- [Useful Libraries](#useful-libraries)
+- [Commit Message Guidelines](#commit-message-guidelines)
+- [CircleCI Setup](#circleci-setup)
+
 ## Code Checks
 
 ### Type Checking
