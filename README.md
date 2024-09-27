@@ -1,6 +1,6 @@
-# Development Best Practices
+# Samkaypro(https://x.com/samkaypro) Development Best Practices
 
-This README outlines our project's development best practices, including code checks, useful libraries, and CI/CD setup.
+This README outlines development best practices, including code checks, useful libraries, and CI/CD setup.
 
 ## Table of Contents
 - [Code Checks](#code-checks)
