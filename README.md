@@ -147,3 +147,131 @@ For more detailed instructions or help with specific setup tasks, please refer t
 ......
 .....
 ....
+
+
+1. Install Docker
+For Windows:
+Download Docker Desktop:
+
+Visit the Docker Desktop for Windows page.
+Download the installer.
+Install Docker Desktop:
+
+Run the installer.
+Follow the installation instructions, which may include enabling WSL 2 and the virtualization feature in BIOS.
+Start Docker:
+
+After installation, launch Docker Desktop from your Start menu.
+Sign in to Docker Hub (Optional):
+
+Create an account on Docker Hub or sign in if you already have an account.
+For macOS:
+Download Docker Desktop:
+
+Go to the Docker Desktop for Mac page.
+Download the installer.
+Install Docker Desktop:
+
+Open the downloaded .dmg file.
+Drag and drop Docker into the Applications folder.
+Start Docker:
+
+Open Docker from your Applications folder.
+You may be prompted to authorize Docker to run.
+Sign in to Docker Hub (Optional):
+
+Create an account on Docker Hub or sign in if you already have an account.
+For Linux:
+Update your package index:
+
+bash
+Copy code
+sudo apt-get update
+Install required packages:
+
+bash
+Copy code
+sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+Add Docker’s official GPG key:
+
+bash
+Copy code
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+Set up the stable repository:
+
+bash
+Copy code
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+Install Docker:
+
+bash
+Copy code
+sudo apt-get update
+sudo apt-get install docker-ce
+Verify Docker installation:
+
+bash
+Copy code
+sudo systemctl status docker
+(Optional) Manage Docker as a non-root user:
+
+Create the docker group and add your user:
+bash
+Copy code
+sudo groupadd docker
+sudo usermod -aG docker $USER
+Log out and log back in for the group change to take effect.
+2. Verify Docker Installation
+After installation, you can verify that Docker is installed correctly:
+
+Open a terminal or command prompt.
+
+Run the following command:
+
+bash
+Copy code
+docker --version
+Run the Docker Hello World container:
+
+bash
+Copy code
+docker run hello-world
+This command downloads a test image and runs it in a container. If everything is set up correctly, you should see a success message.
+3. Basic Docker Commands
+List Docker images:
+
+bash
+Copy code
+docker images
+List running containers:
+
+bash
+Copy code
+docker ps
+List all containers (running and stopped):
+
+bash
+Copy code
+docker ps -a
+Run a container in interactive mode:
+
+bash
+Copy code
+docker run -it <image-name> /bin/bash
+Stop a running container:
+
+bash
+Copy code
+docker stop <container-id>
+Remove a container:
+
+bash
+Copy code
+docker rm <container-id>
+Remove an image:
+
+bash
+Copy code
+docker rmi <image-id>
+4. Further Learning
+Once you're comfortable with the basics, consider exploring more advanced topics like Docker Compose, networking, and Dockerfile creation for building custom images.
